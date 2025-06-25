@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, Download, ExternalLink, Award, Calendar, MapPin, Code, Database, Cloud, Brain } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -40,13 +39,13 @@ const Index = () => {
       title: "Urban Traffic Optimization using Computer Vision",
       description: "Advanced computer vision system for optimizing urban traffic flow using real-time analysis and machine learning algorithms.",
       tools: ["Python", "Computer Vision", "Machine Learning", "OpenCV"],
-      github: "#"
+      github: "https://github.com/harsh22038"
     },
     {
       title: "AI-Powered Agriculture Chatbot using Gemini Flash 2.0",
       description: "Intelligent chatbot leveraging Gemini Flash 2.0 to provide farmers with real-time agricultural insights and recommendations.",
       tools: ["Python", "Gemini Flash 2.0", "NLP", "Agriculture Tech"],
-      github: "#"
+      github: "https://github.com/harsh22038"
     }
   ];
 
@@ -116,13 +115,28 @@ const Index = () => {
               Download Resume
             </Button>
             <div className="flex space-x-4">
-              <Button variant="outline" size="icon" className="border-slate-600 text-slate-300 hover:bg-slate-800">
+              <Button 
+                variant="outline" 
+                size="icon" 
+                className="border-slate-600 text-slate-300 hover:bg-slate-800"
+                onClick={() => window.open('https://github.com/harsh22038', '_blank')}
+              >
                 <Github className="h-5 w-5" />
               </Button>
-              <Button variant="outline" size="icon" className="border-slate-600 text-slate-300 hover:bg-slate-800">
+              <Button 
+                variant="outline" 
+                size="icon" 
+                className="border-slate-600 text-slate-300 hover:bg-slate-800"
+                onClick={() => window.open('https://linkedin.com/in/harsh-vardhan-raju-sampathirao', '_blank')}
+              >
                 <Linkedin className="h-5 w-5" />
               </Button>
-              <Button variant="outline" size="icon" className="border-slate-600 text-slate-300 hover:bg-slate-800">
+              <Button 
+                variant="outline" 
+                size="icon" 
+                className="border-slate-600 text-slate-300 hover:bg-slate-800"
+                onClick={() => window.open('mailto:harshasampathirao58@gmail.com', '_blank')}
+              >
                 <Mail className="h-5 w-5" />
               </Button>
             </div>
@@ -212,7 +226,12 @@ const Index = () => {
                       </Badge>
                     ))}
                   </div>
-                  <Button variant="outline" size="sm" className="border-slate-600 text-slate-300 hover:bg-slate-700">
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="border-slate-600 text-slate-300 hover:bg-slate-700"
+                    onClick={() => window.open(project.github, '_blank')}
+                  >
                     <ExternalLink className="mr-2 h-4 w-4" />
                     View on GitHub
                   </Button>
@@ -300,19 +319,45 @@ const Index = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5 text-purple-400" />
-                  <span className="text-slate-300">harshasampathirao58@gmail.com</span>
+                  <a 
+                    href="mailto:harshasampathirao58@gmail.com"
+                    className="text-slate-300 hover:text-white transition-colors"
+                  >
+                    harshasampathirao58@gmail.com
+                  </a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Github className="h-5 w-5 text-slate-400" />
-                  <span className="text-slate-300">@harsh22038</span>
+                  <a 
+                    href="https://github.com/harsh22038"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-300 hover:text-white transition-colors"
+                  >
+                    @harsh22038
+                  </a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Code className="h-5 w-5 text-blue-400" />
-                  <span className="text-slate-300">@Harsh_22038 (LeetCode)</span>
+                  <a 
+                    href="https://leetcode.com/Harsh_22038"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-300 hover:text-white transition-colors"
+                  >
+                    @Harsh_22038 (LeetCode)
+                  </a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Linkedin className="h-5 w-5 text-blue-500" />
-                  <span className="text-slate-300">@Harsh Vardhan Raju Sampathirao</span>
+                  <a 
+                    href="https://linkedin.com/in/harsh-vardhan-raju-sampathirao"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-300 hover:text-white transition-colors"
+                  >
+                    @Harsh Vardhan Raju Sampathirao
+                  </a>
                 </div>
               </div>
             </div>
