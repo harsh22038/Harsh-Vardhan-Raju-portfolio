@@ -127,7 +127,7 @@ const Index = () => {
                 variant="outline" 
                 size="icon" 
                 className="border-slate-600 text-slate-300 hover:bg-slate-800"
-                onClick={() => window.open('https://linkedin.com/in/harsh-vardhan-raju-sampathirao', '_blank')}
+                onClick={() => window.open('https://www.linkedin.com/in/sampathirao-harsh-vardhan-raju-308929289/', '_blank')}
               >
                 <Linkedin className="h-5 w-5" />
               </Button>
@@ -311,67 +311,113 @@ const Index = () => {
           <h2 className="text-4xl font-bold text-white text-center mb-12">Get In Touch</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-semibold text-white mb-6">Let's Connect</h3>
-              <p className="text-slate-300 text-lg mb-8">
-                I'm always open to discussing new opportunities, collaborating on exciting projects, or simply having a conversation about technology and innovation.
+              <h3 className="text-2xl font-semibold text-white mb-6">Let's Connect & Collaborate</h3>
+              <p className="text-slate-300 text-lg mb-6">
+                I'm passionate about leveraging AI and data science to solve real-world problems. Whether you're looking for a dedicated team member, have an exciting project in mind, or simply want to discuss the latest in technology and innovation, I'd love to hear from you.
               </p>
               
+              <div className="bg-slate-800/30 p-6 rounded-lg border border-slate-700 mb-8">
+                <h4 className="text-white font-medium mb-3">What I'm Looking For:</h4>
+                <ul className="text-slate-300 space-y-2">
+                  <li className="flex items-center space-x-2">
+                    <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                    <span>AI/ML Engineer positions</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                    <span>Data Science opportunities</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                    <span>Cloud computing projects</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
+                    <span>Full-stack development roles</span>
+                  </li>
+                </ul>
+              </div>
+              
               <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Mail className="h-5 w-5 text-purple-400" />
-                  <a 
-                    href="mailto:harshasampathirao58@gmail.com"
-                    className="text-slate-300 hover:text-white transition-colors"
-                  >
-                    harshasampathirao58@gmail.com
-                  </a>
+                <div className="flex items-center space-x-3 p-3 bg-slate-800/20 rounded-lg hover:bg-slate-800/40 transition-colors">
+                  <Mail className="h-5 w-5 text-purple-400 flex-shrink-0" />
+                  <div>
+                    <p className="text-white font-medium">Email</p>
+                    <a 
+                      href="mailto:harshasampathirao58@gmail.com"
+                      className="text-slate-300 hover:text-purple-400 transition-colors"
+                    >
+                      harshasampathirao58@gmail.com
+                    </a>
+                  </div>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <Github className="h-5 w-5 text-slate-400" />
-                  <a 
-                    href="https://github.com/harsh22038"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-slate-300 hover:text-white transition-colors"
-                  >
-                    @harsh22038
-                  </a>
+                
+                <div className="flex items-center space-x-3 p-3 bg-slate-800/20 rounded-lg hover:bg-slate-800/40 transition-colors">
+                  <Github className="h-5 w-5 text-slate-400 flex-shrink-0" />
+                  <div>
+                    <p className="text-white font-medium">GitHub</p>
+                    <a 
+                      href="https://github.com/harsh22038"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-slate-300 hover:text-white transition-colors"
+                    >
+                      @harsh22038
+                    </a>
+                  </div>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <Code className="h-5 w-5 text-blue-400" />
-                  <a 
-                    href="https://leetcode.com/Harsh_22038"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-slate-300 hover:text-white transition-colors"
-                  >
-                    @Harsh_22038 (LeetCode)
-                  </a>
+                
+                <div className="flex items-center space-x-3 p-3 bg-slate-800/20 rounded-lg hover:bg-slate-800/40 transition-colors">
+                  <Code className="h-5 w-5 text-blue-400 flex-shrink-0" />
+                  <div>
+                    <p className="text-white font-medium">LeetCode</p>
+                    <a 
+                      href="https://leetcode.com/Harsh_22038"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-slate-300 hover:text-blue-400 transition-colors"
+                    >
+                      @Harsh_22038
+                    </a>
+                  </div>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <Linkedin className="h-5 w-5 text-blue-500" />
-                  <a 
-                    href="https://linkedin.com/in/harsh-vardhan-raju-sampathirao"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-slate-300 hover:text-white transition-colors"
-                  >
-                    @Harsh Vardhan Raju Sampathirao
-                  </a>
+                
+                <div className="flex items-center space-x-3 p-3 bg-slate-800/20 rounded-lg hover:bg-slate-800/40 transition-colors">
+                  <Linkedin className="h-5 w-5 text-blue-500 flex-shrink-0" />
+                  <div>
+                    <p className="text-white font-medium">LinkedIn</p>
+                    <a 
+                      href="https://www.linkedin.com/in/sampathirao-harsh-vardhan-raju-308929289/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-slate-300 hover:text-blue-400 transition-colors"
+                    >
+                      Sampathirao Harsh Vardhan Raju
+                    </a>
+                  </div>
                 </div>
+              </div>
+
+              <div className="mt-8 p-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg border border-purple-500/30">
+                <p className="text-purple-300 text-sm">
+                  💡 <strong>Quick Response:</strong> I typically respond to emails within 24 hours and am always excited to discuss new opportunities!
+                </p>
               </div>
             </div>
             
             <Card className="bg-slate-800/50 border-slate-700">
               <CardHeader>
                 <CardTitle className="text-white">Send a Message</CardTitle>
+                <CardDescription className="text-slate-400">
+                  Drop me a line and let's start a conversation about your next project!
+                </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
                   <label className="block text-slate-300 mb-2">Name</label>
                   <input 
                     type="text" 
-                    className="w-full p-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:border-purple-500 focus:outline-none"
+                    className="w-full p-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:border-purple-500 focus:outline-none transition-colors"
                     placeholder="Your name"
                   />
                 </div>
@@ -379,19 +425,28 @@ const Index = () => {
                   <label className="block text-slate-300 mb-2">Email</label>
                   <input 
                     type="email" 
-                    className="w-full p-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:border-purple-500 focus:outline-none"
+                    className="w-full p-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:border-purple-500 focus:outline-none transition-colors"
                     placeholder="your.email@example.com"
+                  />
+                </div>
+                <div>
+                  <label className="block text-slate-300 mb-2">Subject</label>
+                  <input 
+                    type="text" 
+                    className="w-full p-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:border-purple-500 focus:outline-none transition-colors"
+                    placeholder="What's this about?"
                   />
                 </div>
                 <div>
                   <label className="block text-slate-300 mb-2">Message</label>
                   <textarea 
                     rows={4}
-                    className="w-full p-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:border-purple-500 focus:outline-none"
-                    placeholder="Your message..."
+                    className="w-full p-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:border-purple-500 focus:outline-none transition-colors"
+                    placeholder="Tell me about your project or opportunity..."
                   />
                 </div>
                 <Button className="w-full bg-purple-600 hover:bg-purple-700">
+                  <Mail className="mr-2 h-4 w-4" />
                   Send Message
                 </Button>
               </CardContent>
