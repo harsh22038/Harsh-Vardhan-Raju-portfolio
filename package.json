@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://harsh22038.github.io/Harsh-Vardhan-Raju-portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

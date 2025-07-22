@@ -7,7 +7,7 @@ import { componentTagger } from "lovable-tagger";
 const repoName = "Harsh-Vardhan-Raju-portfolio";
 
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? `/$Harsh-Vardhan-Raju-portfolio/` : "/",
+  base: mode === "production" ? "/Harsh-Vardhan-Raju-portfolio/" : "/",
   server: {
     host: "::",
     port: 8080,
