@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Github, Linkedin, Mail, Download, ExternalLink, Award, Calendar, MapPin, Code, Database, Cloud, Brain } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -9,7 +9,34 @@ const Index = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   
-  const typingTexts = ['AI Projects', 'Cloud Internships', 'Certified Developer', 'Data Science'];
+  const typingTexts = ['Data Analytics', 'AI Projects', 'Cloud Certified', 'ML Engineer'];
+
+  // Scroll animation hook
+  const useScrollAnimation = () => {
+    const [visibleElements, setVisibleElements] = useState(new Set());
+    
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setVisibleElements(prev => new Set([...prev, entry.target.id]));
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+      );
+
+      const sections = document.querySelectorAll('[data-scroll]');
+      sections.forEach((section) => observer.observe(section));
+
+      return () => observer.disconnect();
+    }, []);
+
+    return visibleElements;
+  };
+
+  const visibleElements = useScrollAnimation();
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -73,7 +100,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header */}
       <header className="fixed top-0 w-full bg-slate-900/80 backdrop-blur-sm z-50 border-b border-slate-700">
         <nav className="container mx-auto px-6 py-4">
@@ -100,7 +127,7 @@ const Index = () => {
               Sampathirao Harsh Vardhan Raju
             </h1>
             <p className="text-xl md:text-2xl text-slate-300 mb-6">
-              AI & Data Science Enthusiast | Cloud Certified | Full-Stack Explorer
+              Data Analytics Specialist | AI & ML Expert | Cloud Certified
             </p>
             <div className="text-lg md:text-xl text-purple-400 h-8">
               <span className="border-r-2 border-purple-400 pr-1 animate-pulse">
@@ -169,7 +196,13 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-6 bg-slate-800/30">
+      <section 
+        id="about" 
+        data-scroll
+        className={`py-20 px-6 bg-slate-800/30 transition-all duration-1000 ${
+          visibleElements.has('about') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+      >
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl font-bold text-white text-center mb-12">About Me</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -206,7 +239,13 @@ const Index = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-6">
+      <section 
+        id="projects" 
+        data-scroll
+        className={`py-20 px-6 transition-all duration-1000 ${
+          visibleElements.has('projects') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+      >
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Featured Projects</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -243,7 +282,13 @@ const Index = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 px-6 bg-slate-800/30">
+      <section 
+        id="skills" 
+        data-scroll
+        className={`py-20 px-6 bg-slate-800/30 transition-all duration-1000 ${
+          visibleElements.has('skills') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+      >
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Skills & Expertise</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -269,7 +314,13 @@ const Index = () => {
       </section>
 
       {/* Certifications Section */}
-      <section className="py-20 px-6">
+      <section 
+        data-scroll
+        className={`py-20 px-6 transition-all duration-1000 ${
+          visibleElements.has('certifications') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+        id="certifications"
+      >
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Certifications & Internships</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -287,7 +338,13 @@ const Index = () => {
       </section>
 
       {/* Achievements Section */}
-      <section className="py-20 px-6 bg-slate-800/30">
+      <section 
+        data-scroll
+        className={`py-20 px-6 bg-slate-800/30 transition-all duration-1000 ${
+          visibleElements.has('achievements') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+        id="achievements"
+      >
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Achievements</h2>
           <div className="space-y-6">
@@ -306,7 +363,13 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-6">
+      <section 
+        id="contact" 
+        data-scroll
+        className={`py-20 px-6 transition-all duration-1000 ${
+          visibleElements.has('contact') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+      >
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Get In Touch</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -320,20 +383,20 @@ const Index = () => {
                 <h4 className="text-white font-medium mb-3">What I'm Looking For:</h4>
                 <ul className="text-slate-300 space-y-2">
                   <li className="flex items-center space-x-2">
-                    <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
-                    <span>AI/ML Engineer positions</span>
+                    <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                    <span>Data Analytics Specialist roles</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                    <span>Data Science opportunities</span>
+                    <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                    <span>Business Intelligence positions</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-                    <span>Cloud computing projects</span>
+                    <span>AI/ML Engineer opportunities</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
-                    <span>Full-stack development roles</span>
+                    <span>Data Science & Cloud projects</span>
                   </li>
                 </ul>
               </div>
