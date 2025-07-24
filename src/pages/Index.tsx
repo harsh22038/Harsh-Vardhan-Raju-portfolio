@@ -60,7 +60,7 @@ const Index = () => {
 
     return () => clearTimeout(timeout);
   }, [currentText, currentIndex, isDeleting, typingTexts]);
-
+  
   const projects = [
     {
       title: "Urban Traffic Optimization using Computer Vision",
@@ -105,7 +105,7 @@ const Index = () => {
       <header className="fixed top-0 w-full bg-slate-900/80 backdrop-blur-sm z-50 border-b border-slate-700">
         <nav className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold text-white">Harsh Vardhan</div>
+            <div className="text-2xl font-bold text-white">S.Harsh Vardhan Raju</div>
             <div className="hidden md:flex space-x-8">
               <a href="#about" className="text-slate-300 hover:text-white transition-colors">About</a>
               <a href="#projects" className="text-slate-300 hover:text-white transition-colors">Projects</a>
@@ -138,8 +138,10 @@ const Index = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
+              <a href="/S.Harsh Vardhan Raju_Resume.pdf" download className="flex items-center">
               <Download className="mr-2 h-5 w-5" />
               Download Resume
+              </a>
             </Button>
             <div className="flex space-x-4">
               <Button 
