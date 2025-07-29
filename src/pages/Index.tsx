@@ -253,6 +253,13 @@ const Index = () => {
                 <Badge variant="secondary">Marathi</Badge>
               </div>
             </div>
+            {/* Right Side: Image */}
+      <div className="flex flex-col items-center justify-center">
+        <img
+          src="/formal_pic.jpg"
+          alt="My Profile"
+          className="rounded-2xl shadow-lg w-80 h-auto object-cover border-4 border-slate-700"
+        />
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-purple-400" />
