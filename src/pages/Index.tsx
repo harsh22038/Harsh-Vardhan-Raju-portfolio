@@ -229,7 +229,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section 
+     <section 
         id="about" 
         data-scroll
         className={`py-20 px-6 bg-slate-800/30 transition-all duration-1000 ${
