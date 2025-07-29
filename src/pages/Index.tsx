@@ -77,12 +77,43 @@ const Index = () => {
   ];
 
   const certifications = [
-    { name: "AWS Academy Cloud Foundations", provider: "AWS", icon: "🏛️" },
-    { name: "Certified System Administrator (CSA)", provider: "ServiceNow", icon: "⚙️" },
-    { name: "Certified Application Developer (CAD)", provider: "ServiceNow", icon: "💻" },
-    { name: "Advanced Data Science", provider: "Unschool", icon: "📊" },
-    { name: "HackerRank Certified", provider: "HackerRank", icon: "🏆" }
-  ];
+  {
+    name: "AWS Academy Cloud Foundations",
+    provider: "AWS",
+    icon: "🏛️",
+    link: "https://drive.google.com/file/d/1w4iIcYLuDvwhh_CIq4D42Irgy_YwLJ6x/view?usp=sharing"
+  },
+  {
+    name: "Certified System Administrator (CSA)",
+    provider: "ServiceNow",
+    icon: "⚙️",
+    link: "https://drive.google.com/file/d/1Nuwn3UKRiU4iM3G0_r1X_4sEiDmS3Veq/view?usp=sharing"
+  },
+  {
+    name: "Certified Application Developer (CAD)",
+    provider: "ServiceNow",
+    icon: "💻",
+    link: "https://drive.google.com/file/d/1Nuwn3UKRiU4iM3G0_r1X_4sEiDmS3Veq/view?usp=sharing"
+  },
+  {
+    name: "Advanced Data Science",
+    provider: "Unschool",
+    icon: "📊",
+    link: "https://drive.google.com/file/d/1_DXi6C_WyKmJHbzkCELoYKDTnXpooqzg/view?usp=sharing"
+  },
+  {
+    name: "HackerRank Certified",
+    provider: "HackerRank",
+    icon: "🏆",
+    link: "https://drive.google.com/file/d/1acptE9nybejBP8GP6hG2KnnbuQF-uyrG/view?usp=sharing"
+  },
+  {
+    name: "Python Essentials",
+    provider: "CISCO",
+    icon: "🐍",
+    link: "https://drive.google.com/file/d/1pRs2d8uRYtPCYw2rrjFnLP4Q-DURRY2h/view?usp=sharing"
+  }
+];
 
   const achievements = [
     { year: "2023", event: "Interstate Powerlifting Championship", position: "3rd Place", icon: "🥉" },
