@@ -256,7 +256,7 @@ const Index = () => {
             {/* Right Side: Image */}
       <div className="flex flex-col items-center justify-center">
         <img
-          src="/Formal_pic.jpg"
+          src="/formal_pic.jpg"
           alt="My Profile"
           className="rounded-2xl shadow-lg w-80 h-auto object-cover border-4 border-slate-700"
         />
